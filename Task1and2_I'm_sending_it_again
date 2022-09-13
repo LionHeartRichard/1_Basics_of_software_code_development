@@ -1,0 +1,45 @@
+package PackageTaskOne;
+/**
+ * @author Alexey Isaev / Rich
+ *
+ */
+
+import java.util.Scanner;
+
+public class MainTaskOne {
+
+	public static void main(String[] args) {
+		
+		double a;
+		double b;
+		double c;
+		double z;
+		double z1;
+		double z2;
+		
+		try (Scanner console = new Scanner(System.in)) {
+			System.out.println("Введите переменную a:");
+			a = console.nextDouble();
+			
+			System.out.println("Введите переменную b:");
+			b = console.nextDouble();
+
+			System.out.println("Введите переменную c:");
+			c = console.nextDouble();
+
+			z=((a-3)*b/2)+c;
+			System.out.println("Задача 1: вычислить z=((a-3)*b/2)+c. Решение задачи №1, z="+z);
+			
+			z1=b+Math.pow((Math.pow(b,2)+4*a*c),-2);
+			z2=Math.pow(a,3)*c+Math.pow(b, -2);
+			z=z1/2*a-z2;
+			System.out.println("Решение задачи №2, z="+z);
+			
+		}
+		catch(NumberFormatException nfe) {
+			System.err.println("Invalid FORMAT!!! Введите другой формат, допустимы только числа (разделитель запятая)!!!");
+		} finally { System.out.println("Спасибо, что воспользовались нашим программным продуктом!");
+		} 			
+	}
+
+}
