@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ркдактирование профиля тренер</title>
+    </head>
+    <body>
+        <h3>Редактирование профиля тренер</h3>
+        <form method="POST">
+            <label>Серия № паспорта</label><br>
+            <label>{{.Id}}</label><br>
+            <input type="hidden" name="id" value="{{.Id}}" /><br><br>
+            <label>Фамилия</label><br>
+            <input type="text" name="surname" value="{{.Surname}}" /><br><br>
+            <label>Имя</label><br>
+            <input type="text" name="name" value="{{.Name}}" /><br><br>
+            <label>Отчество</label><br>
+            <input type="text" name="patronymic" value="{{.Patronymic}}" /><br><br>
+            <input type="submit" value="Завершить редактирование" />
+        </form>
+    </body>
+</html>

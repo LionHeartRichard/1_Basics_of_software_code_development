@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Тренера спортклуба - "Live by Sport"</title>
+</head>
+
+<body>
+    <h2>Список тренеров:</h2>
+    <p><a href="/create">Добавить</a></p>
+    <table>
+        <thead>
+            <th>Серия номер паспорта</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+        </thead>
+        {{range . }}
+        <tr>
+            <td>{{.Id}}</td>
+            <td>{{.Surname}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Patronymic}}</td>
+            <td>
+                <a href="/edit/{{.Id}}">Изменить</a>
+                <a href="/delete/{{.Id}}">Удалить</a>
+            </td>
+        </tr>
+        {{end}}
+    </table>
+</body>
